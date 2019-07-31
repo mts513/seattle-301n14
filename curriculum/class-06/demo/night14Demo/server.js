@@ -44,10 +44,10 @@ app.get('/josie', (request,response) =>{
 })
 
 //Let's make a Constructor, that shapes our incoming .json into a formatted object
-function Cat(query) {
-    this.name = query.name;
-    this.age = query.age;
-    this.whiskers = query.whiskers;
+function Cat(data) {
+    this.name = data.name;
+    this.age = data.age;
+    this.whiskers = data.whiskers;
 }
 
 //when we connect to the port, tell us what port we are listening too
