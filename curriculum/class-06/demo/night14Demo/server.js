@@ -33,13 +33,22 @@ app.get('/amandasCat', (request,response) =>{
 app.get('/josie', (request,response) =>{
     try{
         let josieData = require('./data/cat.json');
-        response.send(josieData);
+        //here is where we might want to re-shape the data from cat.json to an object example
+        let kitty = new Cat(josieData)
+        response.send(kitty);
     } catch(error){
         console.log("There was an error!");
         response.status(500).send("the server broke");
     }
 
 })
+
+//Let's make a Constructor, that shapes our incoming .json into a formatted object
+function Cat(query) {
+    this.name = query.name;
+    this.age = query.age;
+    this.whiskers = query.whiskers;
+}
 
 //when we connect to the port, tell us what port we are listening too
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
