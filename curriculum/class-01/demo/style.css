@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    /* width: 100vw; */
+}
+
+
+
+div {
+    border: solid 1px #301e14;
+    background-color: #301e1460;
+    width: 33%;
+    height: 200px;
+    font-size: 60px;
+    line-height: 200px;
+}
+
+@media all and  (min-width: 600px) {
+    .one {
+        float: left;
+    }
+    .two {
+        float: left;
+    }
+    .three {
+        float: left;
+    }
+
+    
+}
