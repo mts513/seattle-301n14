@@ -35,8 +35,8 @@ function displayPics(){
       viewed.push(rando);
     }
   }
-  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
-  // Rando is not defined
+  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `var to `let`.
+  // let & const do not have scope flexibility.
   console.log(viewed);
 
   for (let i = 0; i < 3; i++){
